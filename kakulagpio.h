@@ -28,6 +28,11 @@ public:
 private slots:
     void timeG1();
     void timeG2();
+    void timeG3();
+    void timeG4();
+    void timeG5();
+    void timeG6();
+    void timeG7();
 
 private:
     Ui::KakulaGpio *ui;
@@ -44,6 +49,11 @@ private:
 
     QTimer *timer;
     QTimer *timer2;
+    QTimer *timer3;
+    QTimer *timer4;
+    QTimer *timer5;
+    QTimer *timer6;
+    QTimer *timer7;
 };
 
 #endif // KAKULAGPIO_H

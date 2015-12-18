@@ -24,6 +24,24 @@ KakulaGpio::KakulaGpio(QWidget *parent) :
     timer2 = new QTimer;
     connect(timer2, SIGNAL(timeout()), this, SLOT(timeG2()));
     timer2->start(responsible);
+
+    timer3 = new QTimer;
+    connect(timer3, SIGNAL(timeout()), this, SLOT(timeG3()));
+    timer3->start(responsible);
+
+    timer4 = new QTimer;
+    connect(timer4, SIGNAL(timeout()), this, SLOT(timeG4()));
+    timer4->start(responsible);
+
+    timer5 = new QTimer;
+    connect(timer5, SIGNAL(timeout()), this, SLOT(timeG5()));
+    timer5->start(responsible);
+
+    timer6 = new QTimer;
+    connect(timer6, SIGNAL(timeout()), this, SLOT(timeG6()));
+
+    timer7 = new QTimer;
+    connect(timer7, SIGNAL(timeout()), this, SLOT(timeG7()));
 }
 
 KakulaGpio::~KakulaGpio()
@@ -114,5 +132,75 @@ void KakulaGpio::timeG2()
     }
     delete gpio26;
     gpio26 = NULL;
+}
+
+void KakulaGpio::timeG3()
+{
+    string inputstate;
+    GPIOClass* gpio20 = new GPIOClass("20");
+    gpio20->setdir_gpio("in");
+    gpio20->getval_gpio(inputstate);
+    if(inputstate == "0")
+    {
+        clickedGong3("n");
+    }
+    delete gpio20;
+    gpio20 = NULL;
+}
+
+void KakulaGpio::timeG4()
+{
+    string inputstate;
+    GPIOClass* gpio16 = new GPIOClass("16");
+    gpio16->setdir_gpio("in");
+    gpio16->getval_gpio(inputstate);
+    if(inputstate == "0")
+    {
+        clickedGong4("n");
+    }
+    delete gpio16;
+    gpio16 = NULL;
+}
+
+void KakulaGpio::timeG5()
+{
+    string inputstate;
+    GPIOClass* gpio19 = new GPIOClass("19");
+    gpio19->setdir_gpio("in");
+    gpio19->getval_gpio(inputstate);
+    if(inputstate == "0")
+    {
+        clickedGong5("n");
+    }
+    delete gpio19;
+    gpio19 = NULL;
+}
+
+void KakulaGpio::timeG6()
+{
+    string inputstate;
+    GPIOClass* gpio13 = new GPIOClass("13");
+    gpio13->setdir_gpio("in");
+    gpio13->getval_gpio(inputstate);
+    if(inputstate == "0")
+    {
+        clickedGong6("n");
+    }
+    delete gpio13;
+    gpio13 = NULL;
+}
+
+void KakulaGpio::timeG7()
+{
+    string inputstate;
+    GPIOClass* gpio12 = new GPIOClass("12");
+    gpio12->setdir_gpio("in");
+    gpio12->getval_gpio(inputstate);
+    if(inputstate == "0")
+    {
+        clickedGong7("n");
+    }
+    delete gpio12;
+    gpio12 = NULL;
 }
 
