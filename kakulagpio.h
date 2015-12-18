@@ -3,6 +3,7 @@
 
 #include <QWidget>
 #include <gong.h>
+#include <QTimer>
 
 namespace Ui {
 class KakulaGpio;
@@ -16,8 +17,22 @@ public:
     explicit KakulaGpio(QWidget *parent = 0);
     ~KakulaGpio();
 
+    void clickedGong(QString type);
+    void clickedGong2(QString type);
+    void clickedGong3(QString type);
+    void clickedGong4(QString type);
+    void clickedGong5(QString type);
+    void clickedGong6(QString type);
+    void clickedGong7(QString type);
+
+private slots:
+    void timeG1();
+    void timeG2();
+
 private:
     Ui::KakulaGpio *ui;
+
+    int responsible;
 
     Gong *gong1;
     Gong *gong2;
@@ -27,13 +42,8 @@ private:
     Gong *gong6;
     Gong *gong7;
 
-    void clickedGong(QString type);
-    void clickedGong2(QString type);
-    void clickedGong3(QString type);
-    void clickedGong4(QString type);
-    void clickedGong5(QString type);
-    void clickedGong6(QString type);
-    void clickedGong7(QString type);
+    QTimer *timer;
+    QTimer *timer2;
 };
 
 #endif // KAKULAGPIO_H
