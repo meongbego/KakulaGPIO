@@ -73,3 +73,61 @@ KakulaGpio::~KakulaGpio()
 {
     delete ui;
 }
+
+void KakulaGpio::clickedGong(QString type)
+{
+
+    this->gong1->setPath("bunyi");
+    this->gong1->setSound("a1.ogg",type);
+    this->gong1->setVolume(100);
+    this->gong1->play();
+}
+
+void KakulaGpio::clickedGong2(QString type)
+{
+    this->gong2->setPath("bunyi");
+    this->gong2->setSound("a2.ogg",type);
+    this->gong2->setVolume(100);
+    this->gong2->play();
+}
+
+void KakulaGpio::clickedGong3(QString type)
+{
+    this->gong3->setPath("bunyi");
+    this->gong3->setSound("a3.ogg",type);
+    this->gong3->setVolume(100);
+    this->gong3->play();
+}
+
+void KakulaGpio::clickedGong4(QString type)
+{
+    this->gong4->setPath("bunyi");
+    this->gong4->setSound("a4.ogg",type);
+    this->gong4->setVolume(100);
+    this->gong4->play();
+}
+
+void KakulaGpio::clickedGong5(QString type)
+{
+    this->gong5->setPath("bunyi");
+    this->gong5->setSound("a5.ogg",type);
+    this->gong5->setVolume(100);
+    this->gong5->play();
+}
+
+void KakulaGpio::clickedGong6(QString type)
+{
+    this->gong6->setPath("bunyi");
+    this->gong6->setSound("a6.ogg",type);
+    this->gong6->setVolume(100);
+    this->gong6->play();
+}
+
+void KakulaGpio::clickedGong7(QString type)
+{
+    this->gong7->setPath("bunyi");
+    this->gong7->setSound("a7.ogg",type);
+    this->gong7->setVolume(100);
+    this->gong7->play();
+}
+
